@@ -1,2 +1,29 @@
-# Customer-Churn-Prediction
-An end-to-end Machine Learning project that predicts telecom customer churn using Python,Scikit-learn, and Random Forest. The project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, hyperparameter tuning, model evaluation, and an interactive Flask-based web dashboard for real-time churn prediction.
+# Customer Churn Prediction
+
+## Overview
+Customer Churn Prediction using Machine Learning and Flask.
+
+## Algorithms Used
+- Logistic Regression
+- KNN
+- Decision Tree
+- Random Forest
+
+## Technologies
+- Python
+- Flask
+- Scikit-Learn
+- Pandas
+- NumPy
+- HTML
+- CSS
+
+## Features
+- Data Preprocessing
+- Feature Engineering
+- Hyperparameter Tuning
+- Model Evaluation
+- Churn Prediction Dashboard
+
+## Dataset
+Telco Customer Churn Dataset
