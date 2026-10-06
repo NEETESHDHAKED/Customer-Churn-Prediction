@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(BASE_DIR, "Models", "model.pkl")
-SCALER_PATH = os.path.join(BASE_DIR, "Models", "scaler.pkl")
-ENCODER_PATH = os.path.join(BASE_DIR, "Models", "label_encoders.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")
+ENCODER_PATH = os.path.join(BASE_DIR, "label_encoders.pkl")
 
 model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
