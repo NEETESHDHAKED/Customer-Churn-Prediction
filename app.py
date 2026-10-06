@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_PATH = os.path.join(BASE_DIR, "Models", "model.pkl")
 SCALER_PATH = os.path.join(BASE_DIR, "Models", "scaler.pkl")
@@ -15,11 +15,9 @@ model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
 label_encoders = joblib.load(ENCODER_PATH)
 
-
 @app.route("/")
 def home():
     return render_template("index.html")
-
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -70,6 +68,6 @@ def predict():
         probability=probability
     )
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
